@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: skaffold-gitops
 spec:
-  replicas: 3
+  replicas: 10 
   selector:
     matchLabels:
       app: skaffold-gitops
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: skaffold-gitops
-        image: javalove93/hello-go
+        image: keemdy/hello-go
         resources:
           limits:
             memory: "64Mi"
